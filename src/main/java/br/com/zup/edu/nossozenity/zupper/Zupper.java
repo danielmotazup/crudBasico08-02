@@ -25,13 +25,13 @@ public class Zupper {
     private String email;
 
     @OneToMany(mappedBy = "dono")
-    private List<Certificado> certificados= new ArrayList<>();
+    private List<Certificado> certificados = new ArrayList<>();
 
     @OneToMany(mappedBy = "recebido")
-    private List<Kudo> kudosRecebidos= new ArrayList<>();
+    private List<Kudo> kudosRecebidos = new ArrayList<>();
 
     @OneToMany(mappedBy = "donoHabilidade")
-    private List<Habilidade> habilidades= new ArrayList<>();
+    private List<Habilidade> habilidades = new ArrayList<>();
 
     public Zupper(String nome, String cargo, LocalDate dataAdmissao, String email) {
         this.nome = nome;
@@ -50,5 +50,13 @@ public class Zupper {
 
     public Long getId() {
         return id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 }

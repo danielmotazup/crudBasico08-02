@@ -13,7 +13,7 @@ public class Kudo {
     private TipoKudo nome;
 
     @Column(nullable = false)
-    private LocalDateTime criadoEm= LocalDateTime.now();
+    private LocalDateTime criadoEm = LocalDateTime.now();
 
     @ManyToOne(optional = false)
     private Zupper recebido;

@@ -33,4 +33,16 @@ public class Habilidade {
     public Long getId() {
         return id;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public NivelHabilidade getNivel() {
+        return nivel;
+    }
+
+    public Zupper getDonoHabilidade() {
+        return donoHabilidade;
+    }
 }

@@ -52,11 +52,39 @@ public class Zupper {
         return id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    public String getCargo() {
+        return cargo;
+    }
+
     public void setCargo(String cargo) {
         this.cargo = cargo;
+    }
+
+    public LocalDate getDataAdmissao() {
+        return dataAdmissao;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public List<Certificado> getCertificados() {
+        return certificados;
+    }
+
+    public List<Kudo> getKudosRecebidos() {
+        return kudosRecebidos;
+    }
+
+    public List<Habilidade> getHabilidades() {
+        return habilidades;
     }
 }

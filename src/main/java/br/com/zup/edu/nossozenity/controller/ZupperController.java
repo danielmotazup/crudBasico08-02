@@ -21,14 +21,10 @@ public class ZupperController {
     }
 
     @PatchMapping("/{idZupper")
-    public ResponseEntity<Void> atualizaZupper(@PathVariable Long idZupper, @RequestBody @Valid ZupperRequest zupperRequest) {
+    public ResponseEntity<Void> atualizaZupper(@PathVariable Long idZupper, @RequestBody @Valid ZupperResponse zupperResponse) {
 
         Zupper zupper = zupperRepository.findById(idZupper).orElseThrow(() ->
                 new ResponseStatusException(NOT_FOUND, "zupper não localizado"));
-
-
-        zupper.setNome(zupperRequest.getNome());
-        zupper.setCargo(zupperRequest.getCargo());
 
 
         return ResponseEntity.noContent().build();
